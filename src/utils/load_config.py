@@ -41,19 +41,4 @@ def load_rag_config(app_config):
     }
     return rag_config
 
-def main():
-    load_dotenv()
-    app_config, config_path = load_yaml_config()
-    directories = load_directories(app_config)
-    model_name, temperature = load_llm_config(app_config)
-    langchain_llm = load_openai_model(model_name, temperature)
-    rag_config = load_rag_config(app_config)
-    print(f"Config path: {config_path}")
-    print(f"LLM temperature: {temperature}")
-    print("Configuration loaded successfully!")
 
-if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        print(f"Error: {e}")

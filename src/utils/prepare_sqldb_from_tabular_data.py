@@ -1,8 +1,9 @@
 from src.utils.load_config import *
 from sqlalchemy import create_engine, inspect
+# from load_config import *
 import pandas as pd
-def PrepareSQLFromTabularData():
 
+def PrepareSQLFromTabularData():
 
     app_config,config_path=load_yaml_config()
 
@@ -38,7 +39,10 @@ def PrepareSQLFromTabularData():
         insp=inspect(engine)
         table_names=insp.get_table_names()
 
-        print("available table names in created sql db",table_names)
+        print("available table names in created sql db",table_names,"in",file_name)
         
 
+if __name__=='__main__':
+
+    PrepareSQLFromTabularData()
 
