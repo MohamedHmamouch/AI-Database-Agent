@@ -38,12 +38,8 @@ class PrepareSQLFromTabularData:
 
 
     def _validate_db(self):
-        """
-        Private method to validate the tables stored in the SQL database.
+        
 
-        It prints out all available table names in the created SQLite database
-        to confirm that the tables have been successfully created.
-        """
         insp = inspect(self.engine)
         table_names = insp.get_table_names()
         print("==============================")
@@ -51,10 +47,5 @@ class PrepareSQLFromTabularData:
         print("==============================")
 
     def run_pipeline(self):
-        """
-        Public method to run the data import pipeline, which includes preparing the database
-        and validating the created tables. It is the main entry point for converting files
-        to SQL tables and confirming their creation.
-        """
         self.prepare_db()
         self._validate_db()

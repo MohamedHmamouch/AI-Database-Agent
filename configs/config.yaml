@@ -18,6 +18,8 @@ llm_config:
   temperature: 0
 
 
+embedding:
+  model_name: "text-embedding-ada-002"
 rag_config:
   collection_name: titanic
   top_k: 1
