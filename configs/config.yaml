@@ -3,8 +3,7 @@ directories:
   sqldb_directory: data/sqldb.db
   uploaded_files_sqldb_directory: data/uploaded_files_sqldb.db
   stored_csv_xlsx_sqldb_directory: data/csv_xlsx_sqldb.db
-  persist_directory: data/chroma
-
+  persist_directory: data/chromadb
 
 
 llm_config:

@@ -1,5 +1,5 @@
-from src.utils.prepare_sqldb_from_tabular_data import PrepareSQLFromTabularData
-from src.utils.LoadConfig import LoadConfig
+from utils.prepare_sqldb_from_tabular_data import PrepareSQLFromTabularData
+from utils.LoadConfig import LoadConfig
 config=LoadConfig()
 if __name__=='__main__':
 
